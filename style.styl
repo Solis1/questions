@@ -109,13 +109,15 @@ body
 						padding 10px 30px
 				
 				.question
-					/*border-bottom 1px dashed #EFEFEF*/
+					border-bottom 2px dashed #FFF
 					box-sizing border-box
 					-moz-box-sizing border-box /* Firefox */
 					min-height 50px
-					padding 2px 15px
+					padding 10px 15px 2px
 					position relative
 					width 100%
+					&:last-child
+						border-bottom 0px dashed #FFF
 				
 					.question-options
 						display block
@@ -160,11 +162,6 @@ body
 				/*bottom 0px*/
 			.carousel-control
 				width 5%
-	
-		#result
-			font-size 2em
-			padding-left 75px
-			margin-top 20px
 		
 		#Canvas3D
 			/*border 1px dotted black*/
@@ -175,7 +172,22 @@ body
 		
 		#categories-result
 			height 100%
-			width 100%	
+			width 100%
+			
+			#final-result
+				height 70%
+				width 100%
+				
+				.final-result-description
+					bottom -120px
+					text-align center
+					
+					#result
+						font-size 2em
+						padding-left 75px
+						margin-top 20px
+				
+					
 		
 			.category-result-container
 				box-sizing border-box
@@ -193,6 +205,7 @@ body
 					height 76%
 					margin 2% 12%
 					width 76%
+					
 						
 					.subcategory-result
 						border 5px solid red

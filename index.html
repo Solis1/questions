@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0031)http://halemo.net/html5/draw3d/ -->
 <html>
 <head>
 <!--
@@ -7,7 +6,7 @@
 -->
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Draw 3D with HTML5</title>
+<title>Questions</title>
 
 <link href="Draw3DStyle.css" type="text/css" title="default" rel="stylesheet">
 <link href="normalize.css" type="text/css" title="default" rel="stylesheet">
@@ -109,7 +108,6 @@ function initialize() {
 		$("#safe-data").click(function(){
 			if (!data_saved){
 				safeData();
-				$('.carousel').carousel(3);
 			}
 				
 		});
@@ -129,6 +127,7 @@ function safeData(){
 		}
 	});
 	if (valid){
+		$('.carousel').carousel(3);
 		/* Display cube */
 		Main3D_Init();
 		initialize();
@@ -209,150 +208,134 @@ $(function () {
 			<!-- Tab panes -->
 			<div class="tab-content">
 				<div class="tab-pane fade in active category" id="category_1">
-					<h2 id="category_1_description" class="category_description">Categoría 1</h2>
+					<h2 id="category_1_description" class="category_description">Categoría 1: “Usuario de TCI”</h2>
 					<div id="c1_sb1" class="subcategory">
-						<h4 id="c1_sb1_description" class="subcategory_description">Subcategoría 1.1</h4>
+						<h4 id="c1_sb1_description" class="subcategory_description">Subcategoría 1.1: DEFICIENTE</h4>
 						<div id="c1_sb1_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 1,Categoría 1] --- [Pregunta 1,Subcategoría 1,Categoría 1] --- [Pregunta 1,Subcategoría 1,Categoría 1]?</span>
+							<span>1. Puedo encender una computadora.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb1_q1_o1" class="option" type="radio" name="c1_sb1_q1" correct="true"/><label for="c1_sb1_q1_o1">Opción 1</label></li>
-								<li><input id="c1_sb1_q1_o2" class="option" type="radio" name="c1_sb1_q1" /><label for="c1_sb1_q1_o2">Opción 2</label></li>
-								<li><input id="c1_sb1_q1_o3" class="option" type="radio" name="c1_sb1_q1" /><label for="c1_sb1_q1_o3">Opción 3</label></li>
+								<li><input id="c1_sb1_q1_o1" class="option" type="radio" value="no" name="c1_sb1_q1"/><label for="c1_sb1_q1_o1">No</label></li>
+								<li><input id="c1_sb1_q1_o2" class="option" type="radio" value="si" name="c1_sb1_q1" correct="true"/><label for="c1_sb1_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb1_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 1,Categoría 1] --- [Pregunta 2,Subcategoría 1,Categoría 1] --- [Pregunta 2,Subcategoría 1,Categoría 1]?</span>
+							<span>2. Puedo iniciar un programa o aplicación.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb1_q2_o1" class="option" type="radio" name="c1_sb1_q2" correct="true"/><label for="c1_sb1_q2_o1">Opción 1</label></li>
-								<li><input id="c1_sb1_q2_o2" class="option" type="radio" name="c1_sb1_q2" /><label for="c1_sb1_q2_o2">Opción 2</label></li>
-								<li><input id="c1_sb1_q2_o3" class="option" type="radio" name="c1_sb1_q2" /><label for="c1_sb1_q2_o3">Opción 3</label></li>
+								<li><input id="c1_sb1_q2_o1" class="option" type="radio" value="no" name="c1_sb1_q2" /><label for="c1_sb1_q2_o1">No</label></li>
+								<li><input id="c1_sb1_q2_o2" class="option" type="radio" value="si" name="c1_sb1_q2" correct="true"/><label for="c1_sb1_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb1_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 1,Categoría 1] --- [Pregunta 3,Subcategoría 1,Categoría 1] --- [Pregunta 3,Subcategoría 1,Categoría 1]?</span>
+							<span>3. Conozco al menos un sistema operativo como Windows, Linux o MacOSX.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb1_q3_o1" class="option" type="radio" name="c1_sb1_q3" correct="true"/><label for="c1_sb1_q3_o1">Opción 1</label></li>
-								<li><input id="c1_sb1_q3_o2" class="option" type="radio" name="c1_sb1_q3" /><label for="c1_sb1_q3_o2">Opción 2</label></li>
-								<li><input id="c1_sb1_q3_o3" class="option" type="radio" name="c1_sb1_q3" /><label for="c1_sb1_q3_o3">Opción 3</label></li>
+								<li><input id="c1_sb1_q3_o1" class="option" type="radio" value="no" name="c1_sb1_q3" /><label for="c1_sb1_q3_o1">No</label></li>
+								<li><input id="c1_sb1_q3_o2" class="option" type="radio" value="si" name="c1_sb1_q3" correct="true"/><label for="c1_sb1_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb1_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 1,Categoría 1] --- [Pregunta 4,Subcategoría 1,Categoría 1] --- [Pregunta 4,Subcategoría 1,Categoría 1]?</span>
+							<span>4. Puedo conectarme a una red inalámbrica.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb1_q4_o1" class="option" type="radio" name="c1_sb1_q4" correct="true"/><label for="c1_sb1_q4_o1">Opción 1</label></li>
-								<li><input id="c1_sb1_q4_o2" class="option" type="radio" name="c1_sb1_q4" /><label for="c1_sb1_q4_o2">Opción 2</label></li>
-								<li><input id="c1_sb1_q4_o3" class="option" type="radio" name="c1_sb1_q4" /><label for="c1_sb1_q4_o3">Opción 3</label></li>
+								<li><input id="c1_sb1_q4_o1" class="option" type="radio" value="no" name="c1_sb1_q4" /><label for="c1_sb1_q4_o1">No</label></li>
+								<li><input id="c1_sb1_q4_o2" class="option" type="radio" value="si" name="c1_sb1_q4" correct="true"/><label for="c1_sb1_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 1.1 -------------------------------------------------------------------------------------->
 
 					<div id="c1_sb2" class="subcategory">
-						<h4 id="c1_sb2_description" class="subcategory_description">Subcategoría 1.2</h4>			
+						<h4 id="c1_sb2_description" class="subcategory_description">Subcategoría 1.2: CONOCE</h4>			
 						<div id="c1_sb2_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 2,Categoría 1] --- [Pregunta 1,Subcategoría 2,Categoría 1] --- [Pregunta 1,Subcategoría 2,Categoría 1]?</span>
+							<span>1. Utilizo aplicaciones de oficina como Word, PowerPoint o Excel.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb2_q1_o1" class="option" type="radio" name="c1_sb2_q1" correct="true"/><label for="c1_sb2_q1_o1">Opción 1</label></li>
-								<li><input id="c1_sb2_q1_o2" class="option" type="radio" name="c1_sb2_q1" /><label for="c1_sb2_q1_o2">Opción 2</label></li>
-								<li><input id="c1_sb2_q1_o3" class="option" type="radio" name="c1_sb2_q1" /><label for="c1_sb2_q1_o3">Opción 3</label></li>
+								<li><input id="c1_sb2_q1_o1" class="option" type="radio" value="no" name="c1_sb2_q1" /><label for="c1_sb2_q1_o1">No</label></li>
+								<li><input id="c1_sb2_q1_o2" class="option" type="radio" value="si" name="c1_sb2_q1" correct="true"/><label for="c1_sb2_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb2_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 2,Categoría 1] --- [Pregunta 2,Subcategoría 2,Categoría 1] --- [Pregunta 2,Subcategoría 2,Categoría 1]?</span>
+							<span>2. Navego en internet.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb2_q2_o1" class="option" type="radio" name="c1_sb2_q2" correct="true"/><label for="c1_sb2_q2_o1">Opción 1</label></li>
-								<li><input id="c1_sb2_q2_o2" class="option" type="radio" name="c1_sb2_q2" /><label for="c1_sb2_q2_o2">Opción 2</label></li>
-								<li><input id="c1_sb2_q2_o3" class="option" type="radio" name="c1_sb2_q2" /><label for="c1_sb2_q2_o3">Opción 3</label></li>
+								<li><input id="c1_sb2_q2_o1" class="option" type="radio" value="no" name="c1_sb2_q2" /><label for="c1_sb2_q2_o1">No</label></li>
+								<li><input id="c1_sb2_q2_o2" class="option" type="radio" value="si" name="c1_sb2_q2" correct="true"/><label for="c1_sb2_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb2_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 2,Categoría 1] --- [Pregunta 3,Subcategoría 2,Categoría 1] --- [Pregunta 3,Subcategoría 2,Categoría 1]?</span>
+							<span>3. Poseo al menos una cuenta de correo electrónico.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb2_q3_o1" class="option" type="radio" name="c1_sb2_q3" correct="true"/><label for="c1_sb2_q3_o1">Opción 1</label></li>
-								<li><input id="c1_sb2_q3_o2" class="option" type="radio" name="c1_sb2_q3" /><label for="c1_sb2_q3_o2">Opción 2</label></li>
-								<li><input id="c1_sb2_q3_o3" class="option" type="radio" name="c1_sb2_q3" /><label for="c1_sb2_q3_o3">Opción 3</label></li>
+								<li><input id="c1_sb2_q3_o1" class="option" type="radio" value="no" name="c1_sb2_q3" /><label for="c1_sb2_q3_o1">No</label></li>
+								<li><input id="c1_sb2_q3_o2" class="option" type="radio" value="si" name="c1_sb2_q3" correct="true"/><label for="c1_sb2_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb2_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 2,Categoría 1] --- [Pregunta 4,Subcategoría 2,Categoría 1] --- [Pregunta 4,Subcategoría 2,Categoría 1]?</span>
+							<span>4. Puedo realizar configuraciones a un dispositivo como smartphone o computadora.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb2_q4_o1" class="option" type="radio" name="c1_sb2_q4" correct="true"/><label for="c1_sb2_q4_o1">Opción 1</label></li>
-								<li><input id="c1_sb2_q4_o2" class="option" type="radio" name="c1_sb2_q4" /><label for="c1_sb2_q4_o2">Opción 2</label></li>
-								<li><input id="c1_sb2_q4_o3" class="option" type="radio" name="c1_sb2_q4" /><label for="c1_sb2_q4_o3">Opción 3</label></li>
+								<li><input id="c1_sb2_q4_o1" class="option" type="radio" value="no" name="c1_sb2_q4" /><label for="c1_sb2_q4_o1">No</label></li>
+								<li><input id="c1_sb2_q4_o2" class="option" type="radio" value="si" name="c1_sb2_q4" correct="true"/><label for="c1_sb2_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 1.2 -------------------------------------------------------------------------------------->
 					
 					<div id="c1_sb3" class="subcategory">
-						<h4 id="c1_sb3_description" class="subcategory_description">Subcategoría 1.3</h4>
+						<h4 id="c1_sb3_description" class="subcategory_description">Subcategoría 1.3: APLICA</h4>
 						<div id="c1_sb3_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 3,Categoría 1] --- [Pregunta 1,Subcategoría 3,Categoría 1] --- [Pregunta 1,Subcategoría 3,Categoría 1]?</span>
+							<span>1. Puedo descargar desde la web archivos como imágenes, documentos, etc.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb3_q1_o1" class="option" type="radio" name="c1_sb3_q1" correct="true"/><label for="c1_sb3_q1_o1">Opción 1</label></li>
-								<li><input id="c1_sb3_q1_o2" class="option" type="radio" name="c1_sb3_q1" /><label for="c1_sb3_q1_o2">Opción 2</label></li>
-								<li><input id="c1_sb3_q1_o3" class="option" type="radio" name="c1_sb3_q1" /><label for="c1_sb3_q1_o3">Opción 3</label></li>
+								<li><input id="c1_sb3_q1_o1" class="option" type="radio" value="no" name="c1_sb3_q1" /><label for="c1_sb3_q1_o1">No</label></li>
+								<li><input id="c1_sb3_q1_o2" class="option" type="radio" value="si" name="c1_sb3_q1" correct="true"/><label for="c1_sb3_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb3_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 3,Categoría 1] --- [Pregunta 2,Subcategoría 3,Categoría 1] --- [Pregunta 2,Subcategoría 3,Categoría 1]?</span>
+							<span>2. Consulto fuentes de información digital, como páginas, blogs, Wikipedia, etc.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb3_q2_o1" class="option" type="radio" name="c1_sb3_q2" correct="true"/><label for="c1_sb3_q2_o1">Opción 1</label></li>
-								<li><input id="c1_sb3_q2_o2" class="option" type="radio" name="c1_sb3_q2" /><label for="c1_sb3_q2_o2">Opción 2</label></li>
-								<li><input id="c1_sb3_q2_o3" class="option" type="radio" name="c1_sb3_q2" /><label for="c1_sb3_q2_o3">Opción 3</label></li>
+								<li><input id="c1_sb3_q2_o1" class="option" type="radio" value="no" name="c1_sb3_q2" /><label for="c1_sb3_q2_o1">No</label></li>
+								<li><input id="c1_sb3_q2_o2" class="option" type="radio" value="si" name="c1_sb3_q2" correct="true"/><label for="c1_sb3_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb3_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 3,Categoría 1] --- [Pregunta 3,Subcategoría 3,Categoría 1] --- [Pregunta 3,Subcategoría 3,Categoría 1]?</span>
+							<span>3. Instalo aplicaciones en computadora y dispositivos móviles.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb3_q3_o1" class="option" type="radio" name="c1_sb3_q3" correct="true"/><label for="c1_sb3_q3_o1">Opción 1</label></li>
-								<li><input id="c1_sb3_q3_o2" class="option" type="radio" name="c1_sb3_q3" /><label for="c1_sb3_q3_o2">Opción 2</label></li>
-								<li><input id="c1_sb3_q3_o3" class="option" type="radio" name="c1_sb3_q3" /><label for="c1_sb3_q3_o3">Opción 3</label></li>
+								<li><input id="c1_sb3_q3_o1" class="option" type="radio" value="no" name="c1_sb3_q3" /><label for="c1_sb3_q3_o1">No</label></li>
+								<li><input id="c1_sb3_q3_o2" class="option" type="radio" value="si" name="c1_sb3_q3" correct="true"/><label for="c1_sb3_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb3_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 3,Categoría 1] --- [Pregunta 4,Subcategoría 3,Categoría 1] --- [Pregunta 4,Subcategoría 3,Categoría 1]?</span>
+							<span>4. Soy consciente de la seguridad, mediante el uso de antvirus, protector de pantalla, redes seguras, etc.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb3_q4_o1" class="option" type="radio" name="c1_sb3_q4" correct="true"/><label for="c1_sb3_q4_o1">Opción 1</label></li>
-								<li><input id="c1_sb3_q4_o2" class="option" type="radio" name="c1_sb3_q4" /><label for="c1_sb3_q4_o2">Opción 2</label></li>
-								<li><input id="c1_sb3_q4_o3" class="option" type="radio" name="c1_sb3_q4" /><label for="c1_sb3_q4_o3">Opción 3</label></li>
+								<li><input id="c1_sb3_q4_o1" class="option" type="radio" value="no" name="c1_sb3_q4" /><label for="c1_sb3_q4_o1">No</label></li>
+								<li><input id="c1_sb3_q4_o2" class="option" type="radio" value="si" name="c1_sb3_q4" correct="true"/><label for="c1_sb3_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 1.3 -------------------------------------------------------------------------------------->
 
 					<div id="c1_sb4" class="subcategory">
-						<h4 id="c1_sb4_description" class="subcategory_description">Subcategoría 1.4</h4>
+						<h4 id="c1_sb4_description" class="subcategory_description">Subcategoría 1.4: COMPLEJAS</h4>
 						<div id="c1_sb4_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 4,Categoría 1] --- [Pregunta 1,Subcategoría 4,Categoría 1] --- [Pregunta 1,Subcategoría 4,Categoría 1]?</span>
+							<span>1. Utilizo contraseñas seguras alfanuméricas y las cambio al menos dos veces al año.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb4_q1_o1" class="option" type="radio" name="c1_sb4_q1" correct="true"/><label for="c1_sb4_q1_o1">Opción 1</label></li>
-								<li><input id="c1_sb4_q1_o2" class="option" type="radio" name="c1_sb4_q1" /><label for="c1_sb4_q1_o2">Opción 2</label></li>
-								<li><input id="c1_sb4_q1_o3" class="option" type="radio" name="c1_sb4_q1" /><label for="c1_sb4_q1_o3">Opción 3</label></li>
+								<li><input id="c1_sb4_q1_o1" class="option" type="radio" value="no" name="c1_sb4_q1" /><label for="c1_sb4_q1_o1">No</label></li>
+								<li><input id="c1_sb4_q1_o2" class="option" type="radio" value="si" name="c1_sb4_q1" correct="true"/><label for="c1_sb4_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb4_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 4,Categoría 1] --- [Pregunta 2,Subcategoría 4,Categoría 1] --- [Pregunta 2,Subcategoría 4,Categoría 1]?</span>
+							<span>2. Utilizo perfiles de al menos una red social como Facebook, Twitter, LinkedIn, Google+, etc.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb4_q2_o1" class="option" type="radio" name="c1_sb4_q2" correct="true"/><label for="c1_sb4_q2_o1">Opción 1</label></li>
-								<li><input id="c1_sb4_q2_o2" class="option" type="radio" name="c1_sb4_q2" /><label for="c1_sb4_q2_o2">Opción 2</label></li>
-								<li><input id="c1_sb4_q2_o3" class="option" type="radio" name="c1_sb4_q2" /><label for="c1_sb4_q2_o3">Opción 3</label></li>
+								<li><input id="c1_sb4_q2_o1" class="option" type="radio" value="no" name="c1_sb4_q2" /><label for="c1_sb4_q2_o1">No</label></li>
+								<li><input id="c1_sb4_q2_o2" class="option" type="radio" value="si" name="c1_sb4_q2" correct="true"/><label for="c1_sb4_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb4_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 4,Categoría 1] --- [Pregunta 3,Subcategoría 4,Categoría 1] --- [Pregunta 3,Subcategoría 4,Categoría 1]?</span>
+							<span>3. Utilizo dispositivos móviles como herramienta versátil para mis necesidades de comunicación, intercambio y consulta de información.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb4_q3_o1" class="option" type="radio" name="c1_sb4_q3" correct="true"/><label for="c1_sb4_q3_o1">Opción 1</label></li>
-								<li><input id="c1_sb4_q3_o2" class="option" type="radio" name="c1_sb4_q3" /><label for="c1_sb4_q3_o2">Opción 2</label></li>
-								<li><input id="c1_sb4_q3_o3" class="option" type="radio" name="c1_sb4_q3" /><label for="c1_sb4_q3_o3">Opción 3</label></li>
+								<li><input id="c1_sb4_q3_o1" class="option" type="radio" value="no" name="c1_sb4_q3" /><label for="c1_sb4_q3_o1">No</label></li>
+								<li><input id="c1_sb4_q3_o2" class="option" type="radio" value="si" name="c1_sb4_q3" correct="true"/><label for="c1_sb4_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c1_sb4_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 4,Categoría 1] --- [Pregunta 4,Subcategoría 4,Categoría 1] --- [Pregunta 4,Subcategoría 4,Categoría 1]?</span>
+							<span>4. Conservo respaldos de información importante en servicios de almacenamiento en la nube.</span>
 							<ul class="question-options">
-								<li><input id="c1_sb4_q4_o1" class="option" type="radio" name="c1_sb4_q4" correct="true"/><label for="c1_sb4_q4_o1">Opción 1</label></li>
-								<li><input id="c1_sb4_q4_o2" class="option" type="radio" name="c1_sb4_q4" /><label for="c1_sb4_q4_o2">Opción 2</label></li>
-								<li><input id="c1_sb4_q4_o3" class="option" type="radio" name="c1_sb4_q4" /><label for="c1_sb4_q4_o3">Opción 3</label></li>
+								<li><input id="c1_sb4_q4_o1" class="option" type="radio" value="no" name="c1_sb4_q4" /><label for="c1_sb4_q4_o1">No</label></li>
+								<li><input id="c1_sb4_q4_o2" class="option" type="radio" value="si" name="c1_sb4_q4" correct="true"/><label for="c1_sb4_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
@@ -361,150 +344,134 @@ $(function () {
 				<!--------------------------------------------------------------------------------- End Category 1 --------------------------------------------------------------------------------------------->			
 				
 				<div class="tab-pane fade category" id="category_2">
-					<h2 id="category_2_description" class="category_description">Categoría 2</h2>
+					<h2 id="category_2_description" class="category_description">Categoría 2: “Pedagogía”</h2>
 					<div id="c2_sb1" class="subcategory">
-						<h4 id="c2_sb1_description" class="subcategory_description">Subcategoría 2.1</h4>
+						<h4 id="c2_sb1_description" class="subcategory_description">Subcategoría 2.1: DEFICIENTE</h4>
 						<div id="c2_sb1_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 1,Categoría 2] --- [Pregunta 1,Subcategoría 1,Categoría 2] --- [Pregunta 1,Subcategoría 1,Categoría 2]?</span>
+							<span>1. Utilizo buscadores como Google.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb1_q1_o1" class="option" type="radio" name="c2_sb1_q1" correct="true"/><label for="c2_sb1_q1_o1">Opción 1</label></li>
-								<li><input id="c2_sb1_q1_o2" class="option" type="radio" name="c2_sb1_q1" /><label for="c2_sb1_q1_o2">Opción 2</label></li>
-								<li><input id="c2_sb1_q1_o3" class="option" type="radio" name="c2_sb1_q1" /><label for="c2_sb1_q1_o3">Opción 3</label></li>
+								<li><input id="c2_sb1_q1_o1" class="option" type="radio" value="no" name="c2_sb1_q1" /><label for="c2_sb1_q1_o1">No</label></li>
+								<li><input id="c2_sb1_q1_o2" class="option" type="radio" value="si" name="c2_sb1_q1" correct="true"/><label for="c2_sb1_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb1_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 1,Categoría 2] --- [Pregunta 2,Subcategoría 1,Categoría 2] --- [Pregunta 2,Subcategoría 1,Categoría 2]?</span>
+							<span>2. Puedo conectar un proyector a una computadora.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb1_q2_o1" class="option" type="radio" name="c2_sb1_q2" correct="true"/><label for="c2_sb1_q2_o1">Opción 1</label></li>
-								<li><input id="c2_sb1_q2_o2" class="option" type="radio" name="c2_sb1_q2" /><label for="c2_sb1_q2_o2">Opción 2</label></li>
-								<li><input id="c2_sb1_q2_o3" class="option" type="radio" name="c2_sb1_q2" /><label for="c2_sb1_q2_o3">Opción 3</label></li>
+								<li><input id="c2_sb1_q2_o1" class="option" type="radio" value="no" name="c2_sb1_q2" /><label for="c2_sb1_q2_o1">No</label></li>
+								<li><input id="c2_sb1_q2_o2" class="option" type="radio" value="si" name="c2_sb1_q2" correct="true"/><label for="c2_sb1_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb1_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 1,Categoría 2] --- [Pregunta 3,Subcategoría 1,Categoría 2] --- [Pregunta 3,Subcategoría 1,Categoría 2]?</span>
+							<span>3. Recibo y envío material de clase por correo electrónico.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb1_q3_o1" class="option" type="radio" name="c2_sb1_q3" correct="true"/><label for="c2_sb1_q3_o1">Opción 1</label></li>
-								<li><input id="c2_sb1_q3_o2" class="option" type="radio" name="c2_sb1_q3" /><label for="c2_sb1_q3_o2">Opción 2</label></li>
-								<li><input id="c2_sb1_q3_o3" class="option" type="radio" name="c2_sb1_q3" /><label for="c2_sb1_q3_o3">Opción 3</label></li>
+								<li><input id="c2_sb1_q3_o1" class="option" type="radio" value="no" name="c2_sb1_q3" /><label for="c2_sb1_q3_o1">No</label></li>
+								<li><input id="c2_sb1_q3_o2" class="option" type="radio" value="si" name="c2_sb1_q3" correct="true"/><label for="c2_sb1_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb1_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 1,Categoría 2] --- [Pregunta 4,Subcategoría 1,Categoría 2] --- [Pregunta 4,Subcategoría 1,Categoría 2]?</span>
+							<span>4. Pido a mis alumnos que complementen sus trabajos con información obtenida en internet.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb1_q4_o1" class="option" type="radio" name="c2_sb1_q4" correct="true"/><label for="c2_sb1_q4_o1">Opción 1</label></li>
-								<li><input id="c2_sb1_q4_o2" class="option" type="radio" name="c2_sb1_q4" /><label for="c2_sb1_q4_o2">Opción 2</label></li>
-								<li><input id="c2_sb1_q4_o3" class="option" type="radio" name="c2_sb1_q4" /><label for="c2_sb1_q4_o3">Opción 3</label></li>
+								<li><input id="c2_sb1_q4_o1" class="option" type="radio" value="no" name="c2_sb1_q4" /><label for="c2_sb1_q4_o1">No</label></li>
+								<li><input id="c2_sb1_q4_o2" class="option" type="radio" value="si" name="c2_sb1_q4" correct="true"/><label for="c2_sb1_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 2.1 -------------------------------------------------------------------------------------->
 					
 					<div id="c2_sb2" class="subcategory">
-						<h4 id="c2_sb2_description" class="subcategory_description">Subcategoría 2.2</h4>
+						<h4 id="c2_sb2_description" class="subcategory_description">Subcategoría 2.2: INTEGRA</h4>
 						<div id="c2_sb2_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 2,Categoría 2] --- [Pregunta 1,Subcategoría 2,Categoría 2] --- [Pregunta 1,Subcategoría 2,Categoría 2]?</span>
+							<span>1. Puedo conectarme a clase a través de herramientas de videoconferencia como Skype o Webex.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb2_q1_o1" class="option" type="radio" name="c2_sb2_q1" correct="true"/><label for="c2_sb2_q1_o1">Opción 1</label></li>
-								<li><input id="c2_sb2_q1_o2" class="option" type="radio" name="c2_sb2_q1" /><label for="c2_sb2_q1_o2">Opción 2</label></li>
-								<li><input id="c2_sb2_q1_o3" class="option" type="radio" name="c2_sb2_q1" /><label for="c2_sb2_q1_o3">Opción 3</label></li>
+								<li><input id="c2_sb2_q1_o1" class="option" type="radio" value="no" name="c2_sb2_q1" /><label for="c2_sb2_q1_o1">No</label></li>
+								<li><input id="c2_sb2_q1_o2" class="option" type="radio" value="si" name="c2_sb2_q1" correct="true"/><label for="c2_sb2_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb2_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 2,Categoría 2] --- [Pregunta 2,Subcategoría 2,Categoría 2] --- [Pregunta 2,Subcategoría 2,Categoría 2]?</span>
+							<span>2. Utilizo presentaciones de Powerpoint en clase.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb2_q2_o1" class="option" type="radio" name="c2_sb2_q2" correct="true"/><label for="c2_sb2_q2_o1">Opción 1</label></li>
-								<li><input id="c2_sb2_q2_o2" class="option" type="radio" name="c2_sb2_q2" /><label for="c2_sb2_q2_o2">Opción 2</label></li>
-								<li><input id="c2_sb2_q2_o3" class="option" type="radio" name="c2_sb2_q2" /><label for="c2_sb2_q2_o3">Opción 3</label></li>
+								<li><input id="c2_sb2_q2_o1" class="option" type="radio" value="no" name="c2_sb2_q2" /><label for="c2_sb2_q2_o1">No</label></li>
+								<li><input id="c2_sb2_q2_o2" class="option" type="radio" value="si" name="c2_sb2_q2" correct="true"/><label for="c2_sb2_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb2_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 2,Categoría 2] --- [Pregunta 3,Subcategoría 2,Categoría 2] --- [Pregunta 3,Subcategoría 2,Categoría 2]?</span>
+							<span>3. He presentado en clase videos obtenidos en la web.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb2_q3_o1" class="option" type="radio" name="c2_sb2_q3" correct="true"/><label for="c2_sb2_q3_o1">Opción 1</label></li>
-								<li><input id="c2_sb2_q3_o2" class="option" type="radio" name="c2_sb2_q3" /><label for="c2_sb2_q3_o2">Opción 2</label></li>
-								<li><input id="c2_sb2_q3_o3" class="option" type="radio" name="c2_sb2_q3" /><label for="c2_sb2_q3_o3">Opción 3</label></li>
+								<li><input id="c2_sb2_q3_o1" class="option" type="radio" value="no" name="c2_sb2_q3" /><label for="c2_sb2_q3_o1">No</label></li>
+								<li><input id="c2_sb2_q3_o2" class="option" type="radio" value="si" name="c2_sb2_q3" correct="true"/><label for="c2_sb2_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb2_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 2,Categoría 2] --- [Pregunta 4,Subcategoría 2,Categoría 2] --- [Pregunta 4,Subcategoría 2,Categoría 2]?</span>
+							<span>4. Mantengo comunicación con mis alumnos a través de redes sociales.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb2_q4_o1" class="option" type="radio" name="c2_sb2_q4" correct="true"/><label for="c2_sb2_q4_o1">Opción 1</label></li>
-								<li><input id="c2_sb2_q4_o2" class="option" type="radio" name="c2_sb2_q4" /><label for="c2_sb2_q4_o2">Opción 2</label></li>
-								<li><input id="c2_sb2_q4_o3" class="option" type="radio" name="c2_sb2_q4" /><label for="c2_sb2_q4_o3">Opción 3</label></li>
+								<li><input id="c2_sb2_q4_o1" class="option" type="radio" value="no" name="c2_sb2_q4" /><label for="c2_sb2_q4_o1">No</label></li>
+								<li><input id="c2_sb2_q4_o2" class="option" type="radio" value="si" name="c2_sb2_q4" correct="true"/><label for="c2_sb2_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 2.2 -------------------------------------------------------------------------------------->
 					
 					<div id="c2_sb3" class="subcategory">
-						<h4 id="c2_sb3_description" class="subcategory_description">Subcategoría 2.3</h4>
+						<h4 id="c2_sb3_description" class="subcategory_description">Subcategoría 2.3: SOLUCIONA</h4>
 						<div id="c2_sb3_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 3,Categoría 2] --- [Pregunta 1,Subcategoría 3,Categoría 2] --- [Pregunta 1,Subcategoría 3,Categoría 2]?</span>
+							<span>1. Comparto archivos en herramientas de nube como Dropbox, iCloud, etc.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb3_q1_o1" class="option" type="radio" name="c2_sb3_q1" correct="true"/><label for="c2_sb3_q1_o1">Opción 1</label></li>
-								<li><input id="c2_sb3_q1_o2" class="option" type="radio" name="c2_sb3_q1" /><label for="c2_sb3_q1_o2">Opción 2</label></li>
-								<li><input id="c2_sb3_q1_o3" class="option" type="radio" name="c2_sb3_q1" /><label for="c2_sb3_q1_o3">Opción 3</label></li>
+								<li><input id="c2_sb3_q1_o1" class="option" type="radio" value="no" name="c2_sb3_q1" /><label for="c2_sb3_q1_o1">No</label></li>
+								<li><input id="c2_sb3_q1_o2" class="option" type="radio" value="si" name="c2_sb3_q1" correct="true"/><label for="c2_sb3_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb3_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 3,Categoría 2] --- [Pregunta 2,Subcategoría 3,Categoría 2] --- [Pregunta 2,Subcategoría 3,Categoría 2]?</span>
+							<span>2. Pido a mis alumnos utilizar diversas fuentes de información, incluyendo blogs, podcasts, etc.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb3_q2_o1" class="option" type="radio" name="c2_sb3_q2" correct="true"/><label for="c2_sb3_q2_o1">Opción 1</label></li>
-								<li><input id="c2_sb3_q2_o2" class="option" type="radio" name="c2_sb3_q2" /><label for="c2_sb3_q2_o2">Opción 2</label></li>
-								<li><input id="c2_sb3_q2_o3" class="option" type="radio" name="c2_sb3_q2" /><label for="c2_sb3_q2_o3">Opción 3</label></li>
+								<li><input id="c2_sb3_q2_o1" class="option" type="radio" value="no" name="c2_sb3_q2" /><label for="c2_sb3_q2_o1">No</label></li>
+								<li><input id="c2_sb3_q2_o2" class="option" type="radio" value="si" name="c2_sb3_q2" correct="true"/><label for="c2_sb3_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb3_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 3,Categoría 2] --- [Pregunta 3,Subcategoría 3,Categoría 2] --- [Pregunta 3,Subcategoría 3,Categoría 2]?</span>
+							<span>3. La planeación de mis clases está disponible en un sitio web, página, blog.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb3_q3_o1" class="option" type="radio" name="c2_sb3_q3" correct="true"/><label for="c2_sb3_q3_o1">Opción 1</label></li>
-								<li><input id="c2_sb3_q3_o2" class="option" type="radio" name="c2_sb3_q3" /><label for="c2_sb3_q3_o2">Opción 2</label></li>
-								<li><input id="c2_sb3_q3_o3" class="option" type="radio" name="c2_sb3_q3" /><label for="c2_sb3_q3_o3">Opción 3</label></li>
+								<li><input id="c2_sb3_q3_o1" class="option" type="radio" value="no" name="c2_sb3_q3" /><label for="c2_sb3_q3_o1">No</label></li>
+								<li><input id="c2_sb3_q3_o2" class="option" type="radio" value="si" name="c2_sb3_q3" correct="true"/><label for="c2_sb3_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb3_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 3,Categoría 2] --- [Pregunta 4,Subcategoría 3,Categoría 2] --- [Pregunta 4,Subcategoría 3,Categoría 2]?</span>
+							<span>4. Permito el uso de laptops en clase.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb3_q4_o1" class="option" type="radio" name="c2_sb3_q4" correct="true"/><label for="c2_sb3_q4_o1">Opción 1</label></li>
-								<li><input id="c2_sb3_q4_o2" class="option" type="radio" name="c2_sb3_q4" /><label for="c2_sb3_q4_o2">Opción 2</label></li>
-								<li><input id="c2_sb3_q4_o3" class="option" type="radio" name="c2_sb3_q4" /><label for="c2_sb3_q4_o3">Opción 3</label></li>
+								<li><input id="c2_sb3_q4_o1" class="option" type="radio" value="no" name="c2_sb3_q4" /><label for="c2_sb3_q4_o1">No</label></li>
+								<li><input id="c2_sb3_q4_o2" class="option" type="radio" value="si" name="c2_sb3_q4" correct="true"/><label for="c2_sb3_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 2.3 -------------------------------------------------------------------------------------->
 					
 					<div id="c2_sb4" class="subcategory">
-						<h4 id="c2_sb4_description" class="subcategory_description">Subcategoría 2.4</h4>
+						<h4 id="c2_sb4_description" class="subcategory_description">Subcategoría 2.4: PROFESOR DEL SIGLO XXI</h4>
 						<div id="c2_sb4_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 4,Categoría 2] --- [Pregunta 1,Subcategoría 4,Categoría 2] --- [Pregunta 1,Subcategoría 4,Categoría 2]?</span>
+							<span>1. Promuevo la colaboración a través de plataformas de crowdsourcing para generar conocimiento colectivo.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb4_q1_o1" class="option" type="radio" name="c2_sb4_q1" correct="true"/><label for="c2_sb4_q1_o1">Opción 1</label></li>
-								<li><input id="c2_sb4_q1_o2" class="option" type="radio" name="c2_sb4_q1" /><label for="c2_sb4_q1_o2">Opción 2</label></li>
-								<li><input id="c2_sb4_q1_o3" class="option" type="radio" name="c2_sb4_q1" /><label for="c2_sb4_q1_o3">Opción 3</label></li>
+								<li><input id="c2_sb4_q1_o1" class="option" type="radio" value="no" name="c2_sb4_q1" /><label for="c2_sb4_q1_o1">No</label></li>
+								<li><input id="c2_sb4_q1_o2" class="option" type="radio" value="si" name="c2_sb4_q1" correct="true"/><label for="c2_sb4_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb4_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 4,Categoría 2] --- [Pregunta 2,Subcategoría 4,Categoría 2] --- [Pregunta 2,Subcategoría 4,Categoría 2]?</span>
+							<span>2. Imparto mi clase apoyado en plataformas LMS como Moodle, Blackboard, etc.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb4_q2_o1" class="option" type="radio" name="c2_sb4_q2" correct="true"/><label for="c2_sb4_q2_o1">Opción 1</label></li>
-								<li><input id="c2_sb4_q2_o2" class="option" type="radio" name="c2_sb4_q2" /><label for="c2_sb4_q2_o2">Opción 2</label></li>
-								<li><input id="c2_sb4_q2_o3" class="option" type="radio" name="c2_sb4_q2" /><label for="c2_sb4_q2_o3">Opción 3</label></li>
+								<li><input id="c2_sb4_q2_o1" class="option" type="radio" value="no" name="c2_sb4_q2" /><label for="c2_sb4_q2_o1">No</label></li>
+								<li><input id="c2_sb4_q2_o2" class="option" type="radio" value="si" name="c2_sb4_q2" correct="true"/><label for="c2_sb4_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb4_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 4,Categoría 2] --- [Pregunta 3,Subcategoría 4,Categoría 2] --- [Pregunta 3,Subcategoría 4,Categoría 2]?</span>
+							<span>3. Animo a mis alumnos a que produzcan -y no sólo reproduzcan- el contenido de sus tareas.</span>
 							<ul class="question-options">
-								<li><input id="c2_sb4_q3_o1" class="option" type="radio" name="c2_sb4_q3" correct="true"/><label for="c2_sb4_q3_o1">Opción 1</label></li>
-								<li><input id="c2_sb4_q3_o2" class="option" type="radio" name="c2_sb4_q3" /><label for="c2_sb4_q3_o2">Opción 2</label></li>
-								<li><input id="c2_sb4_q3_o3" class="option" type="radio" name="c2_sb4_q3" /><label for="c2_sb4_q3_o3">Opción 3</label></li>
+								<li><input id="c2_sb4_q3_o1" class="option" type="radio" value="no" name="c2_sb4_q3" /><label for="c2_sb4_q3_o1">No</label></li>
+								<li><input id="c2_sb4_q3_o2" class="option" type="radio" value="si" name="c2_sb4_q3" correct="true"/><label for="c2_sb4_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c2_sb4_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 4,Categoría 2] --- [Pregunta 4,Subcategoría 4,Categoría 2] --- [Pregunta 4,Subcategoría 4,Categoría 2]?</span>
+							<span>4. Promuevo el uso de dispositivos móviles en clase (BYOD).</span>
 							<ul class="question-options">
-								<li><input id="c2_sb4_q4_o1" class="option" type="radio" name="c2_sb4_q4" correct="true"/><label for="c2_sb4_q4_o1">Opción 1</label></li>
-								<li><input id="c2_sb4_q4_o2" class="option" type="radio" name="c2_sb4_q4" /><label for="c2_sb4_q4_o2">Opción 2</label></li>
-								<li><input id="c2_sb4_q4_o3" class="option" type="radio" name="c2_sb4_q4" /><label for="c2_sb4_q4_o3">Opción 3</label></li>
+								<li><input id="c2_sb4_q4_o1" class="option" type="radio" value="no" name="c2_sb4_q4" /><label for="c2_sb4_q4_o1">No</label></li>
+								<li><input id="c2_sb4_q4_o2" class="option" type="radio" value="si" name="c2_sb4_q4" correct="true"/><label for="c2_sb4_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
@@ -514,151 +481,135 @@ $(function () {
 				<!--------------------------------------------------------------------------------- End Category 2 --------------------------------------------------------------------------------------------->
 				
 				<div class="tab-pane fade category" id="category_3">
-					<h2 id="category_3_description" class="category_description">Categoría 3</h2>
+					<h2 id="category_3_description" class="category_description">Categoría 3: “Desarrollo docente”</h2>
 					
 					<div id="c3_sb1" class="subcategory">
-						<h4 id="c3_sb1_description" class="subcategory_description">Subcategoría 3.1</h4>
+						<h4 id="c3_sb1_description" class="subcategory_description">Subcategoría 3.1: DEFICIENTE</h4>
 						<div id="c3_sb1_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 1,Categoría 3] --- [Pregunta 1,Subcategoría 1,Categoría 3] --- [Pregunta 1,Subcategoría 1,Categoría 3]?</span>
+							<span>1. Recibo únicamente la capacitación que me brinda la institución.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb1_q1_o1" class="option" type="radio" name="c3_sb1_q1" correct="true"/><label for="c3_sb1_q1_o1">Opción 1</label></li>
-								<li><input id="c3_sb1_q1_o2" class="option" type="radio" name="c3_sb1_q1" /><label for="c3_sb1_q1_o2">Opción 2</label></li>
-								<li><input id="c3_sb1_q1_o3" class="option" type="radio" name="c3_sb1_q1" /><label for="c3_sb1_q1_o3">Opción 3</label></li>
+								<li><input id="c3_sb1_q1_o1" class="option" type="radio" value="no" name="c3_sb1_q1" correct="true"/><label for="c3_sb1_q1_o1">No</label></li>
+								<li><input id="c3_sb1_q1_o2" class="option" type="radio" value="si" name="c3_sb1_q1" /><label for="c3_sb1_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb1_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 1,Categoría 3] --- [Pregunta 2,Subcategoría 1,Categoría 3] --- [Pregunta 2,Subcategoría 1,Categoría 3]?</span>
+							<span>2. Requiero de apoyo de especialistas en TI para la solución de problemas prácticos relacionados con tecnología.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb1_q2_o1" class="option" type="radio" name="c3_sb1_q2" correct="true"/><label for="c3_sb1_q2_o1">Opción 1</label></li>
-								<li><input id="c3_sb1_q2_o2" class="option" type="radio" name="c3_sb1_q2" /><label for="c3_sb1_q2_o2">Opción 2</label></li>
-								<li><input id="c3_sb1_q2_o3" class="option" type="radio" name="c3_sb1_q2" /><label for="c3_sb1_q2_o3">Opción 3</label></li>
+								<li><input id="c3_sb1_q2_o1" class="option" type="radio" value="no" name="c3_sb1_q2" correct="true"/><label for="c3_sb1_q2_o1">No</label></li>
+								<li><input id="c3_sb1_q2_o2" class="option" type="radio" value="si" name="c3_sb1_q2" /><label for="c3_sb1_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb1_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 1,Categoría 3] --- [Pregunta 3,Subcategoría 1,Categoría 3] --- [Pregunta 3,Subcategoría 1,Categoría 3]?</span>
+							<span>3. Incluyo únicamente los contenidos y fuentes sugeridos en los programas de las materias que imparto.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb1_q3_o1" class="option" type="radio" name="c3_sb1_q3" correct="true"/><label for="c3_sb1_q3_o1">Opción 1</label></li>
-								<li><input id="c3_sb1_q3_o2" class="option" type="radio" name="c3_sb1_q3" /><label for="c3_sb1_q3_o2">Opción 2</label></li>
-								<li><input id="c3_sb1_q3_o3" class="option" type="radio" name="c3_sb1_q3" /><label for="c3_sb1_q3_o3">Opción 3</label></li>
+								<li><input id="c3_sb1_q3_o1" class="option" type="radio" value="no" name="c3_sb1_q3" correct="true"/><label for="c3_sb1_q3_o1">No</label></li>
+								<li><input id="c3_sb1_q3_o2" class="option" type="radio" value="si" name="c3_sb1_q3" /><label for="c3_sb1_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb1_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 1,Categoría 3] --- [Pregunta 4,Subcategoría 1,Categoría 3] --- [Pregunta 4,Subcategoría 1,Categoría 3]?</span>
+							<span>4. Utilizo únicamente la tecnología disponible en mi institución.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb1_q4_o1" class="option" type="radio" name="c3_sb1_q4" correct="true"/><label for="c3_sb1_q4_o1">Opción 1</label></li>
-								<li><input id="c3_sb1_q4_o2" class="option" type="radio" name="c3_sb1_q4" /><label for="c3_sb1_q4_o2">Opción 2</label></li>
-								<li><input id="c3_sb1_q4_o3" class="option" type="radio" name="c3_sb1_q4" /><label for="c3_sb1_q4_o3">Opción 3</label></li>
+								<li><input id="c3_sb1_q4_o1" class="option" type="radio" value="no" name="c3_sb1_q4" correct="true"/><label for="c3_sb1_q4_o1">No</label></li>
+								<li><input id="c3_sb1_q4_o2" class="option" type="radio" value="si" name="c3_sb1_q4" /><label for="c3_sb1_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 3.1 -------------------------------------------------------------------------------------->
 			
 					<div id="c3_sb2" class="subcategory">
-						<h4 id="c3_sb2_description" class="subcategory_description">Subcategoría 3.2</h4>
+						<h4 id="c3_sb2_description" class="subcategory_description">Subcategoría 3.2: BÁSICO</h4>
 						<div id="c3_sb2_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 2,Categoría 3] --- [Pregunta 1,Subcategoría 2,Categoría 3] --- [Pregunta 1,Subcategoría 2,Categoría 3]?</span>
+							<span>1. Identifico áreas de oportunidad para el uso de tecnología en el desarrollo de mis materias.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb2_q1_o1" class="option" type="radio" name="c3_sb2_q1" correct="true"/><label for="c3_sb2_q1_o1">Opción 1</label></li>
-								<li><input id="c3_sb2_q1_o2" class="option" type="radio" name="c3_sb2_q1" /><label for="c3_sb2_q1_o2">Opción 2</label></li>
-								<li><input id="c3_sb2_q1_o3" class="option" type="radio" name="c3_sb2_q1" /><label for="c3_sb2_q1_o3">Opción 3</label></li>
+								<li><input id="c3_sb2_q1_o1" class="option" type="radio" value="no" name="c3_sb2_q1" /><label for="c3_sb2_q1_o1">No</label></li>
+								<li><input id="c3_sb2_q1_o2" class="option" type="radio" value="si" name="c3_sb2_q1" correct="true"/><label for="c3_sb2_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb2_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 2,Categoría 3] --- [Pregunta 2,Subcategoría 2,Categoría 3] --- [Pregunta 2,Subcategoría 2,Categoría 3]?</span>
+							<span>2. Busco información y soluciones a mis problemas relacionados con el uso de TI.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb2_q2_o1" class="option" type="radio" name="c3_sb2_q2" correct="true"/><label for="c3_sb2_q2_o1">Opción 1</label></li>
-								<li><input id="c3_sb2_q2_o2" class="option" type="radio" name="c3_sb2_q2" /><label for="c3_sb2_q2_o2">Opción 2</label></li>
-								<li><input id="c3_sb2_q2_o3" class="option" type="radio" name="c3_sb2_q2" /><label for="c3_sb2_q2_o3">Opción 3</label></li>
+								<li><input id="c3_sb2_q2_o1" class="option" type="radio" value="no" name="c3_sb2_q2" /><label for="c3_sb2_q2_o1">No</label></li>
+								<li><input id="c3_sb2_q2_o2" class="option" type="radio" value="si" name="c3_sb2_q2" correct="true"/><label for="c3_sb2_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb2_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 2,Categoría 3] --- [Pregunta 3,Subcategoría 2,Categoría 3] --- [Pregunta 3,Subcategoría 2,Categoría 3]?</span>
+							<span>3. Actualizo las fuentes y contenidos sugeridos en los programas de las materias que imparto.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb2_q3_o1" class="option" type="radio" name="c3_sb2_q3" correct="true"/><label for="c3_sb2_q3_o1">Opción 1</label></li>
-								<li><input id="c3_sb2_q3_o2" class="option" type="radio" name="c3_sb2_q3" /><label for="c3_sb2_q3_o2">Opción 2</label></li>
-								<li><input id="c3_sb2_q3_o3" class="option" type="radio" name="c3_sb2_q3" /><label for="c3_sb2_q3_o3">Opción 3</label></li>
+								<li><input id="c3_sb2_q3_o1" class="option" type="radio" value="no" name="c3_sb2_q3" /><label for="c3_sb2_q3_o1">No</label></li>
+								<li><input id="c3_sb2_q3_o2" class="option" type="radio" value="si" name="c3_sb2_q3" correct="true"/><label for="c3_sb2_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb2_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 2,Categoría 3] --- [Pregunta 4,Subcategoría 2,Categoría 3] --- [Pregunta 4,Subcategoría 2,Categoría 3]?</span>
+							<span>4. Utilizo tecnología dentro y fuera de mi institución.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb2_q4_o1" class="option" type="radio" name="c3_sb2_q4" correct="true"/><label for="c3_sb2_q4_o1">Opción 1</label></li>
-								<li><input id="c3_sb2_q4_o2" class="option" type="radio" name="c3_sb2_q4" /><label for="c3_sb2_q4_o2">Opción 2</label></li>
-								<li><input id="c3_sb2_q4_o3" class="option" type="radio" name="c3_sb2_q4" /><label for="c3_sb2_q4_o3">Opción 3</label></li>
+								<li><input id="c3_sb2_q4_o1" class="option" type="radio" value="no" name="c3_sb2_q4" /><label for="c3_sb2_q4_o1">No</label></li>
+								<li><input id="c3_sb2_q4_o2" class="option" type="radio" value="si" name="c3_sb2_q4" correct="true"/><label for="c3_sb2_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 3.2 -------------------------------------------------------------------------------------->
 
 					<div id="c3_sb3" class="subcategory">
-						<h4 id="c3_sb3_description" class="subcategory_description">Subcategoría 3.3</h4>
+						<h4 id="c3_sb3_description" class="subcategory_description">Subcategoría 3.3: GESTOR</h4>
 						<div id="c3_sb3_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 3,Categoría 3] --- [Pregunta 1,Subcategoría 3,Categoría 3] --- [Pregunta 1,Subcategoría 3,Categoría 3]?</span>
+							<span>1. Entre mis fuentes de información se encuentran repositorios abiertos, bases de datos y newsletters relevantes.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb3_q1_o1" class="option" type="radio" name="c3_sb3_q1" correct="true"/><label for="c3_sb3_q1_o1">Opción 1</label></li>
-								<li><input id="c3_sb3_q1_o2" class="option" type="radio" name="c3_sb3_q1" /><label for="c3_sb3_q1_o2">Opción 2</label></li>
-								<li><input id="c3_sb3_q1_o3" class="option" type="radio" name="c3_sb3_q1" /><label for="c3_sb3_q1_o3">Opción 3</label></li>
+								<li><input id="c3_sb3_q1_o1" class="option" type="radio" value="no" name="c3_sb3_q1" /><label for="c3_sb3_q1_o1">No</label></li>
+								<li><input id="c3_sb3_q1_o2" class="option" type="radio" value="si" name="c3_sb3_q1" correct="true"/><label for="c3_sb3_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb3_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 3,Categoría 3] --- [Pregunta 2,Subcategoría 3,Categoría 3] --- [Pregunta 2,Subcategoría 3,Categoría 3]?</span>
+							<span>2. Me mantengo actualizado mediante el diálogo constante con expertos geográficamente dispersos, a través de redes sociales y otras plataformas de comunicación digital.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb3_q2_o1" class="option" type="radio" name="c3_sb3_q2" correct="true"/><label for="c3_sb3_q2_o1">Opción 1</label></li>
-								<li><input id="c3_sb3_q2_o2" class="option" type="radio" name="c3_sb3_q2" /><label for="c3_sb3_q2_o2">Opción 2</label></li>
-								<li><input id="c3_sb3_q2_o3" class="option" type="radio" name="c3_sb3_q2" /><label for="c3_sb3_q2_o3">Opción 3</label></li>
+								<li><input id="c3_sb3_q2_o1" class="option" type="radio" value="no" name="c3_sb3_q2" /><label for="c3_sb3_q2_o1">No</label></li>
+								<li><input id="c3_sb3_q2_o2" class="option" type="radio" value="si" name="c3_sb3_q2" correct="true"/><label for="c3_sb3_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb3_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 3,Categoría 3] --- [Pregunta 3,Subcategoría 3,Categoría 3] --- [Pregunta 3,Subcategoría 3,Categoría 3]?</span>
+							<span>3. Gestiono proactivamente mi desarrollo profesional mediante webinars, diplomados, certificaciones y MOOCS.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb3_q3_o1" class="option" type="radio" name="c3_sb3_q3" correct="true"/><label for="c3_sb3_q3_o1">Opción 1</label></li>
-								<li><input id="c3_sb3_q3_o2" class="option" type="radio" name="c3_sb3_q3" /><label for="c3_sb3_q3_o2">Opción 2</label></li>
-								<li><input id="c3_sb3_q3_o3" class="option" type="radio" name="c3_sb3_q3" /><label for="c3_sb3_q3_o3">Opción 3</label></li>
+								<li><input id="c3_sb3_q3_o1" class="option" type="radio" value="no" name="c3_sb3_q3" /><label for="c3_sb3_q3_o1">No</label></li>
+								<li><input id="c3_sb3_q3_o2" class="option" type="radio" value="si" name="c3_sb3_q3" correct="true"/><label for="c3_sb3_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb3_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 3,Categoría 3] --- [Pregunta 4,Subcategoría 3,Categoría 3] --- [Pregunta 4,Subcategoría 3,Categoría 3]?</span>
+							<span>4. Pruebo constantemente nuevas herramientas y aplicaciones.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb3_q4_o1" class="option" type="radio" name="c3_sb3_q4" correct="true"/><label for="c3_sb3_q4_o1">Opción 1</label></li>
-								<li><input id="c3_sb3_q4_o2" class="option" type="radio" name="c3_sb3_q4" /><label for="c3_sb3_q4_o2">Opción 2</label></li>
-								<li><input id="c3_sb3_q4_o3" class="option" type="radio" name="c3_sb3_q4" /><label for="c3_sb3_q4_o3">Opción 3</label></li>
+								<li><input id="c3_sb3_q4_o1" class="option" type="radio" value="no" name="c3_sb3_q4" /><label for="c3_sb3_q4_o1">No</label></li>
+								<li><input id="c3_sb3_q4_o2" class="option" type="radio" value="si" name="c3_sb3_q4" correct="true"/><label for="c3_sb3_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 3.3 -------------------------------------------------------------------------------------->
 
 					<div id="c3_sb4" class="subcategory">
-						<h4 id="c3_sb4_description" class="subcategory_description">Subcategoría 3.4</h4>
+						<h4 id="c3_sb4_description" class="subcategory_description">Subcategoría 3.4: GUÍA</h4>
 						<div id="c3_sb4_q1" class="question">
-							<span>¿[Pregunta 1,Subcategoría 4,Categoría 3] --- [Pregunta 1,Subcategoría 4,Categoría 3] --- [Pregunta 1,Subcategoría 4,Categoría 3]?</span>
+							<span>1. Brindo cursos, conferencias y webinars.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb4_q1_o1" class="option" type="radio" name="c3_sb4_q1" correct="true"/><label for="c3_sb4_q1_o1">Opción 1</label></li>
-								<li><input id="c3_sb4_q1_o2" class="option" type="radio" name="c3_sb4_q1" /><label for="c3_sb4_q1_o2">Opción 2</label></li>
-								<li><input id="c3_sb4_q1_o3" class="option" type="radio" name="c3_sb4_q1" /><label for="c3_sb4_q1_o3">Opción 3</label></li>
+								<li><input id="c3_sb4_q1_o1" class="option" type="radio" value="no" name="c3_sb4_q1" /><label for="c3_sb4_q1_o1">No</label></li>
+								<li><input id="c3_sb4_q1_o2" class="option" type="radio" value="si" name="c3_sb4_q1" correct="true"/><label for="c3_sb4_q1_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb4_q2" class="question">
-							<span>¿[Pregunta 2,Subcategoría 4,Categoría 3] --- [Pregunta 2,Subcategoría 4,Categoría 3] --- [Pregunta 2,Subcategoría 4,Categoría 3]?</span>
+							<span>2. Genero contenido técnico y científico y lo publico en repositorios abiertos y revistas indexadas.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb4_q2_o1" class="option" type="radio" name="c3_sb4_q2" correct="true"/><label for="c3_sb4_q2_o1">Opción 1</label></li>
-								<li><input id="c3_sb4_q2_o2" class="option" type="radio" name="c3_sb4_q2" /><label for="c3_sb4_q2_o2">Opción 2</label></li>
-								<li><input id="c3_sb4_q2_o3" class="option" type="radio" name="c3_sb4_q2" /><label for="c3_sb4_q2_o3">Opción 3</label></li>
+								<li><input id="c3_sb4_q2_o1" class="option" type="radio" value="no" name="c3_sb4_q2" /><label for="c3_sb4_q2_o1">No</label></li>
+								<li><input id="c3_sb4_q2_o2" class="option" type="radio" value="si" name="c3_sb4_q2" correct="true"/><label for="c3_sb4_q2_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb4_q3" class="question">
-							<span>¿[Pregunta 3,Subcategoría 4,Categoría 3] --- [Pregunta 3,Subcategoría 4,Categoría 3] --- [Pregunta 3,Subcategoría 4,Categoría 3]?</span>
+							<span>3. Sé distinguir cuándo NO es necesario utilizar tecnología digital en la clase.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb4_q3_o1" class="option" type="radio" name="c3_sb4_q3" correct="true"/><label for="c3_sb4_q3_o1">Opción 1</label></li>
-								<li><input id="c3_sb4_q3_o2" class="option" type="radio" name="c3_sb4_q3" /><label for="c3_sb4_q3_o2">Opción 2</label></li>
-								<li><input id="c3_sb4_q3_o3" class="option" type="radio" name="c3_sb4_q3" /><label for="c3_sb4_q3_o3">Opción 3</label></li>
+								<li><input id="c3_sb4_q3_o1" class="option" type="radio" value="no" name="c3_sb4_q3" /><label for="c3_sb4_q3_o1">No</label></li>
+								<li><input id="c3_sb4_q3_o2" class="option" type="radio" value="si" name="c3_sb4_q3" correct="true"/><label for="c3_sb4_q3_o2">Si</label></li>
 							</ul>
 						</div>
 						<div id="c3_sb4_q4" class="question">
-							<span>¿[Pregunta 4,Subcategoría 4,Categoría 3] --- [Pregunta 4,Subcategoría 4,Categoría 3] --- [Pregunta 4,Subcategoría 4,Categoría 3]?</span>
+							<span>4. Recomiendo el uso de nuevas herramientas y aplicaciones.</span>
 							<ul class="question-options">
-								<li><input id="c3_sb4_q4_o1" class="option" type="radio" name="c3_sb4_q4" correct="true"/><label for="c3_sb4_q4_o1">Opción 1</label></li>
-								<li><input id="c3_sb4_q4_o2" class="option" type="radio" name="c3_sb4_q4" /><label for="c3_sb4_q4_o2">Opción 2</label></li>
-								<li><input id="c3_sb4_q4_o3" class="option" type="radio" name="c3_sb4_q4" /><label for="c3_sb4_q4_o3">Opción 3</label></li>
+								<li><input id="c3_sb4_q4_o1" class="option" type="radio" value="no" name="c3_sb4_q4" /><label for="c3_sb4_q4_o1">No</label></li>
+								<li><input id="c3_sb4_q4_o2" class="option" type="radio" value="si" name="c3_sb4_q4" correct="true"/><label for="c3_sb4_q4_o2">Si</label></li>
 							</ul>
 						</div>
 					</div>
@@ -668,7 +619,7 @@ $(function () {
 				</div>
 			</div>
 		</div>
-		<button id="safe-data" class="show-button white">Guardar Datos</button>
+		<button id="safe-data" class="show-button white">Obtener resultado general</button>
 	</section>
 	
 	<section id="canvas_container">
@@ -685,31 +636,30 @@ $(function () {
 			<!-- Wrapper for slides -->
 			<div id="categories-result" class="carousel-inner">
 				<div class="item active category-result-container">
-				  <img src="" alt="">
-				  <div class="category-result">
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  <div class="category-result" id="category-result-1">
+				  	<div class="subcategory-result" id="subcategory-result-1.2">
+				  		<div class="question-result" id="question-result-1.2.1"></div>
+				  		<div class="question-result" id="question-result-1.2.2"></div>
+				  		<div class="question-result" id="question-result-1.2.3"></div>
+				  		<div class="question-result" id="question-result-1.2.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result" id="subcategory-result-1.3">
+				  		<div class="question-result" id="question-result-1.3.1"></div>
+				  		<div class="question-result" id="question-result-1.3.2"></div>
+				  		<div class="question-result" id="question-result-1.3.3"></div>
+				  		<div class="question-result" id="question-result-1.3.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result" id="subcategory-result-1.1">
+				  		<div class="question-result" id="question-result-1.1.1"></div>
+				  		<div class="question-result" id="question-result-1.1.2"></div>
+				  		<div class="question-result" id="question-result-1.1.3"></div>
+				  		<div class="question-result" id="question-result-1.1.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result" id="subcategory-result-1.4">
+				  		<div class="question-result" id="question-result-1.4.1"></div>
+				  		<div class="question-result" id="question-result-1.4.2"></div>
+				  		<div class="question-result" id="question-result-1.4.3"></div>
+				  		<div class="question-result" id="question-result-1.4.4"></div>
 				  	</div>
 				  </div>
 				  <div class="carousel-caption category-result-description">
@@ -783,14 +733,14 @@ $(function () {
 				  	<p>Resultado de categoría 3</p>
 				  </div>
 				</div>
-				<div class="item">
-					<div id="result">Resultado: </div>
+				<div class="item" id="final-result">
 					<!--<canvas id="Canvas3D" width="540" height="400">-->
 					<canvas id="Canvas3D" width="600" height="400">
 						This text is displayed if your browser does not support HTML5 Canvas.
 					</canvas>
 				  <img src="" alt="">
-				  <div class="carousel-caption ">
+				  <div class="carousel-caption final-result-description">
+				  	<h2 id="result">Resultado: </h2>
 				  </div>
 				</div>
 				<!--...-->
