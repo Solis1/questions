@@ -1,0 +1,274 @@
+/*
+//----------------------------------------------------------------------------
+// File........... : Draw3DStyle.css
+// Project........ :
+// Created ....... : 10/10/2011 10:00
+// Modified....... : 20/10/2011 03:00
+// Version ....... : 1.03
+// Author ........ : Moshe Halevi
+//                 : halemo@gmail.com
+//                 :
+// Compiler        : HTML5
+// Module ........ : Draw3D Style Sheet
+//                 :  
+// Sub-module .... : 
+// Description ... : 
+//----------------------------------------------------------------------------
+*/
+
+body
+{
+   background-color: gray;
+   
+}
+
+
+canvas
+{
+   rem-position: absolute; 
+   position: relative; 
+
+   border: solid;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+   border-color: white;
+   background-color: white;
+   rem-padding: 1px;
+}
+rem-canvas:hover
+{
+   border: solid;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+   border-color: white;
+   background-color: lightblue;
+   padding: 1px;
+}
+
+.title
+{
+   rem-border: solid;
+   rem-border-color: black;
+   background-color: white;
+   rem-padding: 5px;
+}
+
+.td1
+{
+   border: solid;
+   border-color: black;
+   rem-background-color: white;
+   padding: 1px;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+}
+.td2
+{
+   border: solid;
+   border-color: black;
+   background-color: white;
+   ppadding: 1px;
+   font-size: 12px; 
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+}
+
+.Subject
+{
+   width: 90;
+   height: 20;
+   background-color: white;
+   font-family: Arial; 
+   font-size: 12px; 
+   color: black; 
+   font-weight: normal; 
+   border: solid;
+   rem-border: dashed;
+   border-color: black;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+ 
+   margin: 2px;
+}
+
+.Button
+{
+   width: 90;
+   height: 20;
+   background-color: yellow;
+   font-family: Arial; 
+   font-size: 12px; 
+   color: black; 
+   font-weight: normal; 
+   border: solid;
+   rem-border: dashed;
+   border-color: black;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+
+   margin: 2px;
+   
+}
+
+.Button:hover
+{
+   width: 90;
+   height: 20;
+   background-color: blue;
+   font-family: Arial; 
+   font-size: 12px; 
+   color: white; 
+   font-weight: normal; 
+   border: solid;
+   rem-border: dashed;
+   border-color: black;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+
+   margin: 2px;
+   
+}
+
+.Input1
+{
+   width: 70px;
+   background-color: white;
+   font-family: Arial; 
+   font-size: 12px; 
+   color: black; 
+   font-weight: normal;
+   border: solid;
+   rem-border: dashed;
+   border-color: white;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+   padding-left: 10px; 
+   padding-right: 10px; 
+   margin: 2px;
+}
+.Input2
+{
+   width: 40px;
+   background-color: white;
+   font-family: Arial; 
+   font-size: 12px; 
+   color: black; 
+   font-weight: normal;
+   border: solid;
+   rem-border: dashed;
+   border-color: white;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+   padding-left: 10px; 
+   padding-right: 10px; 
+   margin: 2px;
+}
+
+.ButtonM
+{
+   height: 20;
+   background-color: yellow;
+   font-family: Arial; 
+   font-size: 12px; 
+   color: black; 
+   font-weight: bold; 
+   border: solid;
+   rem-border: dashed;
+   border-color: black;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+
+   margin: 2px;
+   
+}
+.ButtonM:hover
+{
+   height: 20;
+   background-color: blue;
+   font-family: Arial; 
+   font-size: 12px; 
+   color: white; 
+   font-weight: bold; 
+   border: solid;
+   rem-border: dashed;
+   border-color: black;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+
+   margin: 2px;
+   
+}
+
+
+.DropDownList
+{
+   width: 80px;
+   height: 20px;
+   overflow: hidden;
+   rem-background-color: yellow;
+   font-family: Arial; 
+   font-size: 12px; 
+   rem-color: black; 
+   font-weight: normal; 
+   border: solid;
+   rem-border: dashed;
+   border-color: black;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+
+   margin: 2px;
+   
+}
+.DropDownListM
+{
+   width: 60px;
+   height: 20px;
+   overflow: hidden;
+   rem-background-color: yellow;
+   font-family: Arial; 
+   font-size: 12px; 
+   rem-color: black; 
+   font-weight: normal; 
+   border: solid;
+   rem-border: dashed;
+   border-color: black;
+   border-top-width: 1px;
+   border-left-width: 1px;
+   border-right-width: 1px;
+   border-bottom-width: 1px;
+
+   margin: 2px;
+   
+}
+
+
+.color
+{
+   background-color: white;
+   color: black; 
+}
+

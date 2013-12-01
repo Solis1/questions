@@ -1,0 +1,225 @@
+questions_container_width = 500px
+height_principal = 600px
+safe_data_height = 40px
+/*
+yellow = #f0ad4e
+red = #d9534f
+green = #5cb85c
+blue = #428bca
+*/
+yellow = #f3df7f
+red = #fc867f
+green = #8feb8f
+blue = #75befd
+
+
+body
+	font-size 12px
+	
+.show-button
+	padding 2px 11px
+	color #555
+	border 1px solid #dedede
+	box-sizing border-box;
+	-moz-box-sizing border-box /* Firefox */
+	-webkit-border-radius 5px
+	-moz-border-radius 5px
+	border-radius 5px
+	text-decoration none
+
+	&:hover
+		cursor pointer
+		
+.show-button.white
+	background: #f5f5f5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f0f0f0)); /*  WebKit */
+	background: -moz-linear-gradient(top,  #f9f9f9, #f0f0f0);
+	border-color: #dedede #d8d8d8 #d3d3d3;
+	color: #555;
+	text-shadow: 0 1px 0 #fff;
+	-webkit-box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb;
+	-moz-box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb;
+	-ms-box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb;
+	-o-box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb;
+	box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb;
+	
+	&:hover
+		background: #f4f4f4;
+		background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f8f8f8)); /*  WebKit */
+		background: -moz-linear-gradient(top,  #efefef, #f8f8f8);
+		border-color: #c7c7c7 #c3c3c3 #bebebe;
+		text-shadow: 0 1px 0 #fdfdfd;
+
+		-webkit-box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3;
+		-moz-box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3;
+		-ms-box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3;
+		-o-box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3;
+		box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3;
+	
+#principal-container
+	height height_principal
+	margin 0 auto
+	width 1100px
+	position relative
+	
+
+	
+	
+	#questions_form
+		/*display inline-block*/
+		float left
+		height 100%
+		
+		#safe-data
+			/*bottom 0*/
+			font-size: 1.3em
+			height safe_data_height
+			padding 10px
+			/*position absolute*/
+			text-align center
+			width questions_container_width
+	
+		#questions_container
+			height calc(100% - 80px)
+			overflow auto
+			/*margin-bottom safe_data_height*/
+			position relative
+			width questions_container_width
+			box-sizing border-box
+			-moz-box-sizing border-box /* Firefox */
+	
+			.category
+
+				.category_description
+					margin 0
+					padding 20px 10px
+					text-align center
+				
+				.subcategory
+					opacity .6
+					margin-bottom 10px
+					border 10px solid #BFBFBF
+					
+					&:hover
+						opacity 1
+					
+					.subcategory_description
+						background-color #FFF
+						margin 0
+						padding 10px 30px
+				
+				.question
+					/*border-bottom 1px dashed #EFEFEF*/
+					box-sizing border-box
+					-moz-box-sizing border-box /* Firefox */
+					min-height 50px
+					padding 2px 15px
+					position relative
+					width 100%
+				
+					.question-options
+						display block
+						margin 0
+						padding 0
+						padding-top 10px
+						text-align center
+						width auto
+					
+						li
+							display inline-block
+							margin-right 20px
+							
+					.is_correct
+						position absolute
+						bottom 10px
+						right 20px
+				
+			/*
+			#category_1
+				background-color red
+			#category_2
+				background-color green
+			#category_3
+				background-color blue
+			*/
+			#category_1, #category_2, #category_3
+				background-color #BBB
+
+	#canvas_container
+		background-color #BBB
+		border 1px solid #999
+		float: left
+		height 100%
+		overflow hidden
+		/*padding 10px*/
+		width: 600px
+		.carousel
+			height 100%
+			width 100%
+			.carousel-indicators
+				/*bottom 0px*/
+			.carousel-control
+				width 5%
+	
+		#result
+			font-size 2em
+			padding-left 75px
+			margin-top 20px
+		
+		#Canvas3D
+			/*border 1px dotted black*/
+			height 100%
+			/*margin-top 50px*/
+			margin 0 auto
+			width 100%
+		
+		#categories-result
+			height 100%
+			width 100%	
+		
+			.category-result-container
+				box-sizing border-box
+				-moz-box-sizing border-box /* Firefox */
+				height 100%
+				width 100%
+				
+				.category-result-description
+					bottom 30px
+				
+				.category-result
+					border 20px solid green
+					box-sizing border-box
+					-moz-box-sizing border-box /* Firefox */
+					height 76%
+					margin 2% 12%
+					width 76%
+						
+					.subcategory-result
+						border 5px solid red
+						box-sizing border-box
+						-moz-box-sizing border-box /* Firefox */
+						display inline-block
+						height calc(50% - 2px)
+						width calc(50% - 2px)
+						
+						.question-result
+							border 1px solid
+							box-sizing border-box
+							-moz-box-sizing border-box /* Firefox */
+							display inline-block
+							height calc(50% - 2px)
+							width calc(50% - 2px)
+						
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
