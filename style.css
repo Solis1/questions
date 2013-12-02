@@ -60,6 +60,9 @@ body {
   float: left;
   height: 100%;
 }
+#principal-container #questions_form #myTab {
+  background-color: #222;
+}
 #principal-container #questions_form #safe-data {
 /*bottom 0*/
   font-size: 1.3em;
@@ -86,6 +89,10 @@ body {
 			#category_3
 				background-color blue
 			*/
+}
+#principal-container #questions_form #questions_container .category .safe-data-category {
+  margin-bottom: 5px;
+  width: 100%;
 }
 #principal-container #questions_form #questions_container .category .category_description {
   margin: 0;
@@ -163,63 +170,78 @@ body {
   margin: 0 auto;
   width: 100%;
 }
-#principal-container #canvas_container #categories-result {
+#principal-container #canvas_container #categories-results {
   height: 100%;
   width: 100%;
 }
-#principal-container #canvas_container #categories-result #final-result {
+#principal-container #canvas_container #categories-results #final-result {
   height: 70%;
   width: 100%;
 }
-#principal-container #canvas_container #categories-result #final-result .final-result-description {
+#principal-container #canvas_container #categories-results #final-result .final-result-description {
   bottom: -120px;
   left: 10%;
   right: 10%;
   text-align: center;
 }
-#principal-container #canvas_container #categories-result #final-result .final-result-description #result {
+#principal-container #canvas_container #categories-results #final-result .final-result-description #result {
   font-size: 2em;
   margin-top: 20px;
 }
-#principal-container #canvas_container #categories-result .category-result-container {
+#principal-container #canvas_container #categories-results .category-result-container {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 /* Firefox */
   height: 100%;
   width: 100%;
 }
-#principal-container #canvas_container #categories-result .category-result-container .category-result-description {
+#principal-container #canvas_container #categories-results .category-result-container .category-result-description {
   bottom: 30px;
 }
-#principal-container #canvas_container #categories-result .category-result-container .category-result {
+#principal-container #canvas_container #categories-results .category-result-container .category-result {
   border: 20px solid #8feb8f;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 /* Firefox */
   height: 76%;
   margin: 2% 12%;
+  position: relative;
   width: 76%;
 }
-#principal-container #canvas_container #categories-result .category-result-container .category-result .subcategory-result {
+#principal-container #canvas_container #categories-results .category-result-container .category-result .top {
+  top: 0;
+}
+#principal-container #canvas_container #categories-results .category-result-container .category-result .bottom {
+  bottom: 0;
+}
+#principal-container #canvas_container #categories-results .category-result-container .category-result .left {
+  left: 0;
+}
+#principal-container #canvas_container #categories-results .category-result-container .category-result .right {
+  right: 0;
+}
+#principal-container #canvas_container #categories-results .category-result-container .category-result .subcategory-result {
   border: 5px solid #fc867f;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 /* Firefox */
-  display: inline-block;
-  height: calc(50% - 2px);
-  width: calc(50% - 2px);
+/*display inline-block*/
+  height: 50%;
+  position: absolute;
+  width: 50%;
 }
-#principal-container #canvas_container #categories-result .category-result-container .category-result .subcategory-result .question-result {
+#principal-container #canvas_container #categories-results .category-result-container .category-result .subcategory-result .question-result {
   border: 1px solid;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 /* Firefox */
-  display: inline-block;
-  height: calc(50% - 2px);
+/*display inline-block*/
+  position: absolute;
+  height: 50%;
   text-align: center;
-  width: calc(50% - 2px);
+  width: 50%;
 }
-#principal-container #canvas_container #categories-result .category-result-container .category-result .subcategory-result .question-result .question-result-graphic {
+#principal-container #canvas_container #categories-results .category-result-container .category-result .subcategory-result .question-result .question-result-graphic {
   position: relative;
   top: calc(50% - 20px);
 }

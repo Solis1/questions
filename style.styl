@@ -70,6 +70,9 @@ body
 		float left
 		height 100%
 		
+		#myTab
+			background-color #222
+		
 		#safe-data
 			/*bottom 0*/
 			font-size: 1.3em
@@ -89,7 +92,11 @@ body
 			-moz-box-sizing border-box /* Firefox */
 	
 			.category
-
+				
+				.safe-data-category
+					margin-bottom 5px
+					width 100%
+				
 				.category_description
 					margin 0
 					padding 20px 10px
@@ -170,7 +177,7 @@ body
 			margin 0 auto
 			width 100%
 		
-		#categories-result
+		#categories-results
 			height 100%
 			width 100%
 			
@@ -205,25 +212,37 @@ body
 					-moz-box-sizing border-box /* Firefox */
 					height 76%
 					margin 2% 12%
+					position relative
 					width 76%
 					
 						
+					.top
+						top 0
+					.bottom
+						bottom 0
+					.left
+						left 0
+					.right
+						right 0
+					
 					.subcategory-result
 						border 5px solid red
 						box-sizing border-box
 						-moz-box-sizing border-box /* Firefox */
-						display inline-block
-						height calc(50% - 2px)
-						width calc(50% - 2px)
+						/*display inline-block*/
+						height 50%
+						position absolute
+						width 50%
 						
 						.question-result
 							border 1px solid
 							box-sizing border-box
 							-moz-box-sizing border-box /* Firefox */
-							display inline-block
-							height calc(50% - 2px)
+							/*display inline-block*/
+							position absolute
+							height 50%
 							text-align center
-							width calc(50% - 2px)
+							width 50%
 							
 							.question-result-graphic
 								position: relative;

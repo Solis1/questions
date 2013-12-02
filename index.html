@@ -169,7 +169,7 @@ function safeData(){
 			}*/
 			
 			if (question_options.find('input:checked').attr('correct') == 'true'){
-				question_options.parent().find('.is_correct').append('<i class="fa fa-check-circle fa-2x"></i>');
+				question_options.parent().find('.is_correct').html('<i class="fa fa-check-circle fa-2x"></i>');
 				if (category == 'category_1'){
 					dot_x++;
 				} else if (category == 'category_2'){
@@ -178,7 +178,7 @@ function safeData(){
 					dot_z++;
 				}
 			}else {
-				question_options.parent().find('.is_correct').append('<i class="fa fa-times-circle fa-2x"></i>');
+				question_options.parent().find('.is_correct').html('<i class="fa fa-times-circle fa-2x"></i>');
 			}
 			
 		});
@@ -246,7 +246,7 @@ function question_is_correct(question){
 	question.append('<div class="is_correct"></div>');
 	question_options.find('input[correct=true]').parent().css('background-color', '#EFEFEF');
 	if (question_options.find('input:checked').attr('correct') == 'true'){
-		question_options.parent().find('.is_correct').append('<i class="fa fa-check-circle fa-2x"></i>');
+		question_options.parent().find('.is_correct').html('<i class="fa fa-check-circle fa-2x"></i>');
 		if (category == 'category_1'){
 			dot_x++;
 		} else if (category == 'category_2'){
@@ -256,7 +256,7 @@ function question_is_correct(question){
 		}
 		return true
 	}else {
-		question_options.parent().find('.is_correct').append('<i class="fa fa-times-circle fa-2x"></i>');
+		question_options.parent().find('.is_correct').html('<i class="fa fa-times-circle fa-2x"></i>');
 		return false
 	}
 }
@@ -264,14 +264,21 @@ function question_is_correct(question){
 function print_category_result(category, data){
 	//console.log(category);
 	//console.log(data);
+	var category_result;
+	var category_number = category.attr('id').match(/[0-9]$/)[0];
 	var question_result;
+	var questions_number = 0;
+	var correct_questions = 0;
+	var percentage;
 	$.each(data, function(){
+		questions_number++;
 		//question_result = $("#question-result-"+this.category+'.'+this.subcategory+'.'+this.question);
 		question_result = document.getElementById("question-result-"+this.category+'.'+this.subcategory+'.'+this.question);
 		//console.log("#question-result-"+this.category+'.'+this.subcategory+'.'+this.question);
 		question_result.style.opacity = "0.6";
 		if (this.is_correct){
 			//question_result.css('background-color', '#FFF');
+			correct_questions++;
 			question_result.style.backgroundColor = "green";
 			question_result.innerHTML = '<i class="fa fa-check-circle fa-3x question-result-graphic"></i>';
 		}else {
@@ -280,6 +287,10 @@ function print_category_result(category, data){
 			question_result.innerHTML = '<i class="fa fa-times-circle fa-3x question-result-graphic"></i>';
 		}
 	});
+	percentage = (correct_questions/questions_number) * 100;
+	category_result = $("#category-result-" + category_number);
+	$('#category-result-description-' + category_number).find('.category-result-percentage').empty().append('Obtuvo ' + percentage + '% de esta categoría');
+	$('.carousel').carousel(category_number-1);
 }
 </script>
 </head>
@@ -434,7 +445,7 @@ function print_category_result(category, data){
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 1.4 -------------------------------------------------------------------------------------->			
-					<button class="safe-data-category btn btn-default btn-primary" style="width: 100%; margin-bottom: 5px;">Guardar datos de Categoría 1</button>
+					<button class="safe-data-category btn btn-default btn-primary">Guardar datos de Categoría 1</button>
 				</div>
 				<!--------------------------------------------------------------------------------- End Category 1 --------------------------------------------------------------------------------------------->			
 				
@@ -571,7 +582,7 @@ function print_category_result(category, data){
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 2.4 -------------------------------------------------------------------------------------->
-
+					<button class="safe-data-category btn btn-default btn-primary">Guardar datos de Categoría 2</button>
 				</div>
 				<!--------------------------------------------------------------------------------- End Category 2 --------------------------------------------------------------------------------------------->
 				
@@ -709,8 +720,8 @@ function print_category_result(category, data){
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 3.4 -------------------------------------------------------------------------------------->
-
-<!--------------------------------------------------------------------------------- End Category 3 ----------------------------------------------------------------------------------------------------->				
+					<button class="safe-data-category btn btn-default btn-primary">Guardar datos de Categoría 3</button>
+<!--------------------------------------------------------------------------------- End Category 3 ----------------------------------------------------------------------------------------------------->
 				</div>
 			</div>
 		</div>
@@ -729,102 +740,100 @@ function print_category_result(category, data){
 			</ol>
 
 			<!-- Wrapper for slides -->
-			<div id="categories-result" class="carousel-inner">
+			<div id="categories-results" class="carousel-inner">
 				<div class="item active category-result-container">
 				  <div class="category-result" id="category-result-1">
-				  	<div class="subcategory-result" id="subcategory-result-1.2">
-				  		<div class="question-result" id="question-result-1.2.1"></div>
-				  		<div class="question-result" id="question-result-1.2.2"></div>
-				  		<div class="question-result" id="question-result-1.2.3"></div>
-				  		<div class="question-result" id="question-result-1.2.4"></div>
+				  	<div class="subcategory-result bottom left" id="subcategory-result-1.1">
+				  		<div class="question-result bottom left" id="question-result-1.1.1"></div>
+				  		<div class="question-result top left" id="question-result-1.1.2"></div>
+				  		<div class="question-result top right" id="question-result-1.1.3"></div>
+				  		<div class="question-result bottom right" id="question-result-1.1.4"></div>
 				  	</div>
-				  	<div class="subcategory-result" id="subcategory-result-1.3">
-				  		<div class="question-result" id="question-result-1.3.1"></div>
-				  		<div class="question-result" id="question-result-1.3.2"></div>
-				  		<div class="question-result" id="question-result-1.3.3"></div>
-				  		<div class="question-result" id="question-result-1.3.4"></div>
+				  	<div class="subcategory-result top left" id="subcategory-result-1.2">
+				  		<div class="question-result bottom left" id="question-result-1.2.1"></div>
+				  		<div class="question-result top left" id="question-result-1.2.2"></div>
+				  		<div class="question-result top right" id="question-result-1.2.3"></div>
+				  		<div class="question-result bottom right" id="question-result-1.2.4"></div>
 				  	</div>
-				  	<div class="subcategory-result" id="subcategory-result-1.1">
-				  		<div class="question-result" id="question-result-1.1.1"></div>
-				  		<div class="question-result" id="question-result-1.1.2"></div>
-				  		<div class="question-result" id="question-result-1.1.3"></div>
-				  		<div class="question-result" id="question-result-1.1.4"></div>
+				  	<div class="subcategory-result top right" id="subcategory-result-1.3">
+				  		<div class="question-result bottom left" id="question-result-1.3.1"></div>
+				  		<div class="question-result top left" id="question-result-1.3.2"></div>
+				  		<div class="question-result top right" id="question-result-1.3.3"></div>
+				  		<div class="question-result bottom right" id="question-result-1.3.4"></div>
 				  	</div>
-				  	<div class="subcategory-result" id="subcategory-result-1.4">
-				  		<div class="question-result" id="question-result-1.4.1"></div>
-				  		<div class="question-result" id="question-result-1.4.2"></div>
-				  		<div class="question-result" id="question-result-1.4.3"></div>
-				  		<div class="question-result" id="question-result-1.4.4"></div>
+				  	<div class="subcategory-result  bottom right" id="subcategory-result-1.4">
+				  		<div class="question-result bottom left" id="question-result-1.4.1"></div>
+				  		<div class="question-result top left" id="question-result-1.4.2"></div>
+				  		<div class="question-result top right" id="question-result-1.4.3"></div>
+				  		<div class="question-result bottom right" id="question-result-1.4.4"></div>
 				  	</div>
 				  </div>
-				  <div class="carousel-caption category-result-description">
-				  	<h4>Obtuvo 83% de la categoría 1</h4>
+				  <div id="category-result-description-1" class="carousel-caption category-result-description">
+				  	<h4 class="category-result-percentage"></h4>
 				  	<p>Resultado de categoría 1</p>
 				  </div>
 				</div>
 				<div class="item category-result-container">
-				  <img src="" alt="">
 				  <div class="category-result">
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result bottom left" id="subcategory-result-2.1">
+				  		<div class="question-result bottom left" id="question-result-2.1.1"></div>
+				  		<div class="question-result top left" id="question-result-2.1.2"></div>
+				  		<div class="question-result top right" id="question-result-2.1.3"></div>
+				  		<div class="question-result bottom right" id="question-result-2.1.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result top left" id="subcategory-result-2.2">
+				  		<div class="question-result bottom left" id="question-result-2.2.1"></div>
+				  		<div class="question-result top left" id="question-result-2.2.2"></div>
+				  		<div class="question-result top right" id="question-result-2.2.3"></div>
+				  		<div class="question-result bottom right" id="question-result-2.2.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result top right" id="subcategory-result-2.3">
+				  		<div class="question-result bottom left" id="question-result-2.3.1"></div>
+				  		<div class="question-result top left" id="question-result-2.3.2"></div>
+				  		<div class="question-result top right" id="question-result-2.3.3"></div>
+				  		<div class="question-result bottom right" id="question-result-2.3.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result  bottom right" id="subcategory-result-2.4">
+				  		<div class="question-result bottom left" id="question-result-2.4.1"></div>
+				  		<div class="question-result top left" id="question-result-2.4.2"></div>
+				  		<div class="question-result top right" id="question-result-2.4.3"></div>
+				  		<div class="question-result bottom right" id="question-result-2.4.4"></div>
 				  	</div>
 				  </div>
-				  <div class="carousel-caption category-result-description">
-				  	<h4>Obtuvo 83% de la categoría 2</h4>
+				  <div id="category-result-description-2" class="carousel-caption category-result-description">
+				  	<h4 class="category-result-percentage"></h4>
 				  	<p>Resultado de categoría 2</p>
 				  </div>
 				</div>
 				<div class="item category-result-container">
-				  <img src="" alt="">
 				  <div class="category-result">
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result bottom left" id="subcategory-result-3.1">
+				  		<div class="question-result bottom left" id="question-result-3.1.1"></div>
+				  		<div class="question-result top left" id="question-result-3.1.2"></div>
+				  		<div class="question-result top right" id="question-result-3.1.3"></div>
+				  		<div class="question-result bottom right" id="question-result-3.1.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result top left" id="subcategory-result-3.2">
+				  		<div class="question-result bottom left" id="question-result-3.2.1"></div>
+				  		<div class="question-result top left" id="question-result-3.2.2"></div>
+				  		<div class="question-result top right" id="question-result-3.2.3"></div>
+				  		<div class="question-result bottom right" id="question-result-3.2.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result top right" id="subcategory-result-3.3">
+				  		<div class="question-result bottom left" id="question-result-3.3.1"></div>
+				  		<div class="question-result top left" id="question-result-3.3.2"></div>
+				  		<div class="question-result top right" id="question-result-3.3.3"></div>
+				  		<div class="question-result bottom right" id="question-result-3.3.4"></div>
 				  	</div>
-				  	<div class="subcategory-result">
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
-				  		<div class="question-result"></div>
+				  	<div class="subcategory-result  bottom right" id="subcategory-result-3.4">
+				  		<div class="question-result bottom left" id="question-result-3.4.1"></div>
+				  		<div class="question-result top left" id="question-result-3.4.2"></div>
+				  		<div class="question-result top right" id="question-result-3.4.3"></div>
+				  		<div class="question-result bottom right" id="question-result-3.4.4"></div>
 				  	</div>
 				  </div>
-				  <div class="carousel-caption category-result-description">
-				  	<h4>Obtuvo 83% de la categoría 3</h4>
+				  <div id="category-result-description-3" class="carousel-caption category-result-description">
+				  	<h4 class="category-result-percentage"></h4>
 				  	<p>Resultado de categoría 3</p>
 				  </div>
 				</div>
