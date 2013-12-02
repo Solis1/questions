@@ -173,11 +173,12 @@ body {
 }
 #principal-container #canvas_container #categories-result #final-result .final-result-description {
   bottom: -120px;
+  left: 10%;
+  right: 10%;
   text-align: center;
 }
 #principal-container #canvas_container #categories-result #final-result .final-result-description #result {
   font-size: 2em;
-  padding-left: 75px;
   margin-top: 20px;
 }
 #principal-container #canvas_container #categories-result .category-result-container {
@@ -215,5 +216,10 @@ body {
 /* Firefox */
   display: inline-block;
   height: calc(50% - 2px);
+  text-align: center;
   width: calc(50% - 2px);
+}
+#principal-container #canvas_container #categories-result .category-result-container .category-result .subcategory-result .question-result .question-result-graphic {
+  position: relative;
+  top: calc(50% - 20px);
 }

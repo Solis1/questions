@@ -90,7 +90,6 @@ function initialize() {
 			var parentOffset = $(this).parent().offset();
 			perspective.tx = Math.round( ( (event.pageX - parentOffset.left) / $("#Canvas3D").innerWidth() ) * 100 );
 			perspective.ty = Math.round( ( (event.pageY - parentOffset.top) / $("#Canvas3D").innerHeight() ) * 100 );
-		
 		});
 		
 		var count = 0;
@@ -108,10 +107,35 @@ function initialize() {
 		$("#safe-data").click(function(){
 			if (!data_saved){
 				safeData();
-			}
-				
+			}	
+		});
+		
+		$(".safe-data-category").click(function(e){
+			var categoryId = $(e.target).closest('.category').attr('id');
+			safeDataCategory(categoryId);
+		});
+		
+		$(".question").hover(function(){
+			var index = get_index_of_question($(this));
+			//$("#question-result-" + index).css('opacity', '1.0');
+			$("#question-result").css('opacity', '0.6');
+			document.getElementById("question-result-" + index).style.opacity = 1.0;
+		});
+		
+		$(".question").mouseleave(function(){
+			var index = get_index_of_question($(this));
+			//$("#question-result-" + index).css('opacity', '0.6');
+			document.getElementById("question-result-" + index).style.opacity = 0.6;
 		});
 	});
+	
+function get_index_of_question(question){
+	var category_number = question.closest('.category').attr('id').match(/[0-9]$/)[0]
+	var subcategory_number = question.closest('.subcategory').attr('id').match(/[0-9]$/)[0]
+	var question_number = question.attr('id').match(/[0-9]$/)[0]
+	var response = category_number + '.' + subcategory_number + '.' + question_number;
+	return response;
+}
 	
 
 function safeData(){
@@ -168,15 +192,6 @@ function safeData(){
 	
 function update(){
 	angle = (perspective.tx * 1.6) + 10;
-/*
-	if (angle != ((perspective.tx * 1.6) + 10) ){
-		if (perspective.tx > 50){
-			angle+=2;
-		} else{
-			angle-=2;
-		}
-	}
-*/
 	g_ctx3d.RotateZFix(angle);
   Main3D_Draw();
 	setTimeout( update, 1000 / 30 );
@@ -187,6 +202,85 @@ function update(){
 $(function () {
 	$('#myTab a:first').tab('show')
 });
+
+function safeDataCategory(categoryId){
+	var is_correct;
+	var valid = true;
+	var category = $("#"+categoryId);
+	var category_number = category.attr('id').replace("category_", "")
+	var subcategory_number;
+	var question_number;
+	var message;
+	var questions_not_answered = [];
+	var result_of_category = {}
+	//Verify all questions are answered
+	category.find('.question-options').each(function(){
+		if ($(this).find('input:checked').size() == 0){
+			valid = false;
+			questions_not_answered.push($(this).parent().find('span').text());
+		}
+	});
+	if (valid){
+		category.find('input').attr('disabled', 'true');
+		category.find('.question').each(function(){
+			is_correct = question_is_correct($(this));
+			subcategory_number = (/[0-9]$/).exec($(this).closest('.subcategory').attr('id'))[0];
+			question_number = (/[0-9]$/).exec($(this).attr('id'))[0];
+			eval('result_of_category.' + $(this).attr('id') + ' = {category: ' + category_number + ', subcategory: ' + subcategory_number + ', question: ' + question_number + ', is_correct:' + is_correct + '}');
+		});
+		print_category_result(category, result_of_category);
+	} else{
+		message = "No ha contestado las siguiente preguntas:\n";
+		$.each(questions_not_answered, function(){
+			message += '\t' + this + "\n";
+		});
+		// #TODO: Get subcategory of questions
+		alert(message);
+	}
+
+}
+
+function question_is_correct(question){
+	var question_options = question.find('.question-options');
+	var category = question_options.closest('.category').attr('id');
+	question.append('<div class="is_correct"></div>');
+	question_options.find('input[correct=true]').parent().css('background-color', '#EFEFEF');
+	if (question_options.find('input:checked').attr('correct') == 'true'){
+		question_options.parent().find('.is_correct').append('<i class="fa fa-check-circle fa-2x"></i>');
+		if (category == 'category_1'){
+			dot_x++;
+		} else if (category == 'category_2'){
+			dot_y++;
+		} else if(category == 'category_3'){
+			dot_z++;
+		}
+		return true
+	}else {
+		question_options.parent().find('.is_correct').append('<i class="fa fa-times-circle fa-2x"></i>');
+		return false
+	}
+}
+
+function print_category_result(category, data){
+	//console.log(category);
+	//console.log(data);
+	var question_result;
+	$.each(data, function(){
+		//question_result = $("#question-result-"+this.category+'.'+this.subcategory+'.'+this.question);
+		question_result = document.getElementById("question-result-"+this.category+'.'+this.subcategory+'.'+this.question);
+		//console.log("#question-result-"+this.category+'.'+this.subcategory+'.'+this.question);
+		question_result.style.opacity = "0.6";
+		if (this.is_correct){
+			//question_result.css('background-color', '#FFF');
+			question_result.style.backgroundColor = "green";
+			question_result.innerHTML = '<i class="fa fa-check-circle fa-3x question-result-graphic"></i>';
+		}else {
+			//question_result.css('background-color', '#000');
+			question_result.style.backgroundColor = "red";
+			question_result.innerHTML = '<i class="fa fa-times-circle fa-3x question-result-graphic"></i>';
+		}
+	});
+}
 </script>
 </head>
 
@@ -340,6 +434,7 @@ $(function () {
 						</div>
 					</div>
 					<!--------------------------------------------------------------------------------- End subcategory 1.4 -------------------------------------------------------------------------------------->			
+					<button class="safe-data-category btn btn-default btn-primary" style="width: 100%; margin-bottom: 5px;">Guardar datos de Categoría 1</button>
 				</div>
 				<!--------------------------------------------------------------------------------- End Category 1 --------------------------------------------------------------------------------------------->			
 				
