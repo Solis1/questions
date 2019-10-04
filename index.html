@@ -38,14 +38,14 @@
 //Globals
 //----------------------------------------------------------------------------
 //Dimensiones
-var nqx;
-var nqy;
-var nqz;
+let nqx;
+let nqy;
+let nqz;
 
 //Coordenadas
-var dot_x = 0;
-var dot_y = 0;
-var dot_z = 0;
+let dot_x = 0;
+let dot_y = 0;
+let dot_z = 0;
 
 
 
@@ -129,7 +129,7 @@ function initialize() {
 		});
 	});
 	
-function get_index_of_question(question){
+let get_index_of_question = (question) => {
 	var category_number = question.closest('.category').attr('id').match(/[0-9]$/)[0]
 	var subcategory_number = question.closest('.subcategory').attr('id').match(/[0-9]$/)[0]
 	var question_number = question.attr('id').match(/[0-9]$/)[0]
